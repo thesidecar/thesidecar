@@ -60,6 +60,7 @@ h3 {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
+  text-decoration: none;
   border-color: rgba(175, 149, 112, 0.9); }
   .btn.disabled {
     pointer-events: none;

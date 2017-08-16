@@ -1,0 +1,213 @@
+@charset "UTF-8";
+html {
+  height: 100%;
+  padding: 2rem;
+  padding: 2vw; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body {
+  background: url(apple-touch-icon.png) no-repeat center center;
+  font-family: "mostra-nuova",sans-serif;
+  font-size: 20px;
+  padding: 2rem;
+  padding: 2vw; }
+  body:before {
+    content: '';
+    border: 3px solid #af9570;
+    border-image: linear-gradient(135deg, #c1ad91, #977c55) 30 stretch;
+    position: fixed;
+    left: 2rem;
+    top: 2rem;
+    bottom: 2rem;
+    right: 2rem;
+    left: 2vw;
+    top: 2vw;
+    bottom: 2vw;
+    right: 2vw; }
+
+p {
+  line-height: 1.2; }
+
+section,
+header {
+  margin: 2rem 0;
+  text-align: center; }
+  section > p, section nav,
+  header > p,
+  header nav {
+    max-width: 320px;
+    margin: 1em auto; }
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700; }
+
+h3 {
+  font-size: 1.2rem; }
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: .3em 1em;
+  font-weight: bold;
+  color: #352c1e;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border-color: rgba(175, 149, 112, 0.9); }
+  .btn.disabled {
+    pointer-events: none;
+    color: rgba(175, 149, 112, 0.5); }
+    .btn.disabled, .btn.disabled:before, .btn.disabled:after {
+      border: 2px solid rgba(175, 149, 112, 0.25); }
+  .btn, .btn:before, .btn:after {
+    border: 2px solid rgba(175, 149, 112, 0.5);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.1, 1) 0s; }
+  .btn:before, .btn:after {
+    position: absolute;
+    content: ''; }
+  .btn:before {
+    left: -6px;
+    right: -6px;
+    top: 2px;
+    bottom: 2px;
+    transition-duration: .5s;
+    border-color: rgba(175, 149, 112, 0.4); }
+  .btn:after {
+    top: -6px;
+    bottom: -6px;
+    left: 2px;
+    right: 2px;
+    transition-duration: 1s;
+    border-color: rgba(175, 149, 112, 0.1); }
+  .btn:hover {
+    border-color: #af9570; }
+    .btn:hover:before {
+      border-color: #af9570; }
+    .btn:hover:after {
+      border-color: #af9570; }
+
+hr, .hr {
+  width: 10%;
+  margin: 4rem auto;
+  border: 0;
+  position: relative;
+  border-top: 2px solid #af9570;
+  text-align: center; }
+  hr:before, hr:after, .hr:before, .hr:after {
+    content: '';
+    width: 33%;
+    display: block;
+    margin: 0 auto;
+    border-top: 2px solid #af9570;
+    position: relative;
+    top: -8px; }
+  hr:after, .hr:after {
+    top: auto;
+    bottom: -2px; }
+
+header {
+  padding: 1rem 0; }
+  header > * {
+    width: 50vw; }
+  header img {
+    width: 100%;
+    height: auto; }
+
+.club {
+  list-style: none;
+  padding: 0;
+  width: 66vw;
+  margin: 1rem auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .club > * {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    padding: 1rem;
+    max-width: 33%; }
+  .club figure {
+    position: relative;
+    padding: 1rem; }
+    .club figure a {
+      color: white;
+      text-decoration: none;
+      padding: .25em; }
+      .club figure a .fa {
+        font-size: 1.2em; }
+    .club figure img {
+      max-width: 100%;
+      height: auto;
+      mix-blend-mode: multiply;
+      -webkit-filter: brightness(1.25) grayscale(1) contrast(1.25);
+              filter: brightness(1.25) grayscale(1) contrast(1.25); }
+    .club figure h3 {
+      text-align: center;
+      position: relative; }
+    .club figure figcaption {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      color: white;
+      padding: 1rem;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+          align-items: center;
+      text-align: center;
+      font-weight: bold; }
+    .club figure:hover {
+      background-color: #af9570;
+      color: white; }
+      .club figure:hover figcaption {
+        opacity: 1; }
+      .club figure:hover img {
+        opacity: 0.5; }
+
+.seats {
+  list-style: none;
+  padding: 0;
+  min-width: 66vw;
+  margin: 1rem auto;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .seats > * {
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    padding: 1rem;
+    max-width: 300px; }
+  .seats h3 small {
+    display: block;
+    text-transform: lowercase;
+    opacity: 0.4; }
+  .seats ul {
+    text-align: left;
+    list-style-type: none;
+    padding-left: 0; }
+    .seats ul li:before {
+      content: '⬗';
+      margin-right: .5em; }
+
+@media only screen and (max-width: 768px) {
+  .club {
+    width: auto; }
+    .club > * {
+      max-width: 50%; } }

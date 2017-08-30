@@ -8,8 +8,32 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
   
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
 
-  <link rel='stylesheet' href='assets/c95094ac8bc231e2944faa8682d363be.css'>
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
   <script src="https://use.typekit.net/eyu0elh.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
@@ -31,23 +55,27 @@
   <section>
     <h2>Better Together</h2>
     <p>
-      The Sidecar isn’t just a coworking space; It’s a tightly-knit community of creators, doers, idea makers and innovators in the heart of Helena.
+      The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
+      We believe that we do life and work better, side-by-side than alone.
     </p>
   </section>
 
-  <!--div class="hr"></div>
+  <div class="hr"></div>
 
   <section>
     <h2>
       The Club
     </h2>
     <p>
-      We're not a place. We're a community.
+      A diverse group of artists, photographers, programmers, designers and creators.
     </p>
     <ul class="club">
       <li>
         <figure>
-          <img alt="Matt Cook" src="http://atlaslocal.com/wp-content/uploads/2016/07/Matt-C@2x.jpg">
+          <div class="images">
+            <img alt="Jason O'Neil" src="assets/images/jason.jpg">
+            <img alt="Jason O'Neil" class="over" src="assets/images/jason-2.jpg">
+          </div>
           <h3>Jason O'Neil</h3>
           <figcaption>
             <div>
@@ -66,7 +94,10 @@
       </li>
       <li>
         <figure>
-          <img alt="Chris Merritt" src="http://atlaslocal.com/wp-content/uploads/2016/06/Chris@2x.jpg">
+          <div class="images">
+            <img alt="Rogie King" src="assets/images/rogie.jpg">
+            <img alt="Rogie King" class="over" src="assets/images/rogie-2.jpg">
+          </div>
           <h3>Rogie King</h3>
           <figcaption>
             <div>
@@ -87,7 +118,10 @@
       </li>
       <li>
         <figure>
-          <img alt="Chris Merritt" src="http://atlaslocal.com/wp-content/uploads/2016/06/tara.png">
+          <div class="images">
+            <img alt="Jodi Carlson" src="assets/images/jodi.jpg">
+            <img alt="Jodi Carlson" class="over" src="assets/images/jodi-2.jpg">
+          </div>
           <h3>Jodi Carlson</h3>
           <figcaption>
             <div>
@@ -106,14 +140,116 @@
           </figcaption>
         </figure>
       </li>
+      <!--li>
+        <figure>
+          <img alt="Chris Merritt" src="https://pbs.twimg.com/profile_images/851224860470661121/Rup4lXMp_400x400.jpg">
+          <h3>Cody Melton</h3>
+          <figcaption>
+            <div>
+              <p>
+                Code, Full Stack &amp; Kombucha Connoisseur
+              </p>
+              <p>
+                <a href="//twitter.com/cmeltonmt">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/cgmelton">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Skye Hatten" src="https://scontent-lga3-1.xx.fbcdn.net/v/t31.0-8/20045378_821176678059747_4222404386540104609_o.jpg?oh=86215fe1f2c746c73398c242fce5c9de&oe=5A1D8ADC">
+          <h3>Skye Hatten</h3>
+          <figcaption>
+            <div>
+              <p>
+                Photographer. Dreamer.
+              </p>
+              <p>
+                <a href="//twitter.com/cmeltonmt">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/cgmelton">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Christine Eckel" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/19989808_10212770146031556_6996758908849919262_n.jpg?oh=b79353ae137d25dff53bbccc5e7a384e&oe=5A1AAEB7">
+          <h3>Christine Eckel</h3>
+          <figcaption>
+            <div>
+              <p>
+                Photographer. Dreamer.
+              </p>
+              <p>
+                <a href="//twitter.com/cmeltonmt">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/cgmelton">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Chris Merritt" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/20914199_700124748720_8515489668300849992_n.jpg?oh=d342bc62529acb5e7f7e7f2a3b03cb24&oe=5A5CC18B">
+          <h3>Tara Jones</h3>
+          <figcaption>
+            <div>
+              <p>
+                Social Media
+              </p>
+              <p>
+                <a href="//twitter.com/cmeltonmt">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/cgmelton">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img alt="Chris Merritt" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/21105558_10155412626370590_7274588253627737042_n.jpg?oh=e3931a2e22a4e5de06d9c2f602e00838&oe=5A2DEB1F">
+          <h3>Ginny Emery</h3>
+          <figcaption>
+            <div>
+              <p>
+                <a href="//twitter.com/cmeltonmt">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/ginnythrashemery">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li-->
 
     </ul>
-  </section-->
+  </section>
 
   <div class="hr"></div>
 
   <section>
-    <h2>Seats</h2>
+    <h2>Ride with Us</h2>
     <ul class="seats">
       <li>
         <h3>
@@ -122,11 +258,11 @@
         </h3>
         <p>For the casual individual who needs a home base to recharge and focus. Come take a seat and be a part of the Sidecar community.</p>
         <ul>
-          <li>Shared desks and couches</li>
+          <li>Shared desk/couches</li>
           <li>Chairs/Stools provided</li>
           <li>Limited Access (8-5ish)</li>
           <li>Free Coffee &amp; Beer</li>
-          <li>Wifi</li>
+          <li>Wifi/Electric</li>
         </ul>
         <p>
           <a class="btn disabled">
@@ -145,17 +281,17 @@
           The Sidecar’s dedicated desk allows for a personal desktop set-up exactly the way you work. Leave your desktop if you’d like. Bring a chia pet. A fish. It’s your desk, make it! (okay, maybe not a fish).
         </p>
         <ul>
-          <li>Dedicated sit-stand desk</li>
-          <li>Chair provided</li>
-          <li>24/7 Access</li>
+          <li>Automated sit-stand desk</li>
+          <li>Ergo Mesh Chair</li>
+          <li>24/7 Keypad Access</li>
           <li>Free Coffee &amp; Beer</li>
-          <li>Wifi</li>
-          <li>Conference Room access</li>
+          <li>Wifi/Electric/USB Power</li>
+          <li>Conference Room</li>
         </ul>
         <p>
           <a class="btn" href="mailto:thesidecarclub@gmail.com">
             <i></i>
-            2 Left — Contact us
+            3 Left — Contact us
           </a>
         </p>
       </li>
@@ -168,22 +304,39 @@
           The Sidecar’s offices are perfect for the entrepreneur flying solo and give you the freedom to fully customize the space to reflect your work and personality.
         </p>
         <ul>
-          <li>Locking office with East facing windows</li>
-          <li>Sit-stand desk</li>
-          <li>Chair provided</li>
-          <li>24/7 Access</li>
+          <li>Locked office with windows</li>
+          <li>Automated Sit-stand desk</li>
+          <li>Ergo Mesh Chair provided</li>
+          <li>24/7 Keypad Access</li>
           <li>Free Coffee &amp; Beer</li>
-          <li>All utilities included (wifi/electric)</li>
-          <li>Conference Room access</li>
+          <li>Wifi/Electric/USB Power</li>
+          <li>Conference Room</li>
         </ul>
         <p>
           <a class="btn" href="mailto:thesidecarclub@gmail.com">
             <i></i>
-            2 Left — Contact us
+            1 Left — Contact us
           </a>
         </p>
       </li>
     </ul>
+  </section>
+
+  <div class="hr"></div>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>Got questions about our community or want to schedule a trial run?</p>
+    <p>
+      <a class="btn" href="https://www.messenger.com/t/sidecarclubmt">
+        <i></i>
+        Message Us
+      </a>
+      or
+      <a class="btn" href="mailto:thesidecarclub@gmail.com">
+        <i></i>
+        Email Us
+      </a>
   </section>
 
 

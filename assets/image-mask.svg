@@ -1,0 +1,27 @@
+<svg width="326" height="326" viewBox="0 0 326 326" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>image-mask</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-362 -148)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 362.365 148L 687.635 148L 687.635 473.269L 362.365 473.269L 362.365 148Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="image-mask" clip-path="url(#clip-0)">
+<g id="Union">
+<use xlink:href="#path0_fill" transform="translate(382.366 168.31)"/>
+</g>
+<g id="Union">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path1_fill" fill="white" transform="translate(367 152)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path2_stroke_2x" transform="translate(367 152)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 142.622 0L 285.244 142.622L 142.622 285.244L 0 142.622L 142.622 0Z"/>
+<path id="path1_fill" d="M 158.5 0L 317 158.5L 158.5 317L 0 158.5L 158.5 0Z"/>
+<path id="path2_stroke_2x" d="M 317 158.5L 318.414 159.914L 319.828 158.5L 318.414 157.086L 317 158.5ZM 158.5 0L 159.914 -1.41421L 158.5 -2.82843L 157.086 -1.41421L 158.5 0ZM 158.5 317L 157.086 318.414L 158.5 319.828L 159.914 318.414L 158.5 317ZM 0 158.5L -1.41421 157.086L -2.82843 158.5L -1.41421 159.914L 0 158.5ZM 318.414 157.086L 159.914 -1.41421L 157.086 1.41421L 315.586 159.914L 318.414 157.086ZM 159.914 318.414L 318.414 159.914L 315.586 157.086L 157.086 315.586L 159.914 318.414ZM -1.41421 159.914L 157.086 318.414L 159.914 315.586L 1.41421 157.086L -1.41421 159.914ZM 157.086 -1.41421L -1.41421 157.086L 1.41421 159.914L 159.914 1.41421L 157.086 -1.41421Z"/>
+</defs>
+</svg>

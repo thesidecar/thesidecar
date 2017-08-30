@@ -18,7 +18,7 @@ body {
   padding: 2vw; }
   body:before {
     content: '';
-    border: 3px solid #af9570;
+    border: 2px solid #af9570;
     border-image: linear-gradient(135deg, #c1ad91, #977c55) 30 stretch;
     position: fixed;
     left: 2rem;
@@ -40,7 +40,7 @@ header {
   section > p, section nav,
   header > p,
   header nav {
-    max-width: 320px;
+    max-width: 20em;
     margin: 1em auto; }
 
 h1, h2, h3, h4 {
@@ -54,11 +54,15 @@ h3 {
 .btn {
   position: relative;
   display: inline-block;
-  padding: .3em 1em;
+  padding: .5em 1em;
+  margin: .5em;
   font-weight: bold;
   color: #352c1e;
   font-family: inherit;
   font-size: inherit;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
   cursor: pointer;
   text-decoration: none;
   border-color: rgba(175, 149, 112, 0.9); }
@@ -149,9 +153,24 @@ header {
     .club figure img {
       max-width: 100%;
       height: auto;
-      mix-blend-mode: multiply;
-      -webkit-filter: brightness(1.25) grayscale(1) contrast(1.25);
-              filter: brightness(1.25) grayscale(1) contrast(1.25); }
+      display: inline-block; }
+    .club figure > .images {
+      -webkit-filter: brightness(1.05) grayscale(1) contrast(1.25);
+              filter: brightness(1.05) grayscale(1) contrast(1.25);
+      -webkit-mask-image: url(/assets/image-mask.svg);
+              mask-image: url(/assets/image-mask.svg);
+      -webkit-mask-size: 100% 100%;
+              mask-size: 100% 100%;
+      display: block;
+      position: relative; }
+      .club figure > .images img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0; }
+      .club figure > .images img:first-child {
+        position: relative;
+        opacity: 1; }
     .club figure h3 {
       text-align: center;
       position: relative; }
@@ -169,15 +188,21 @@ header {
       display: flex;
       -ms-flex-align: center;
           align-items: center;
+      -ms-flex-pack: center;
+          justify-content: center;
       text-align: center;
-      font-weight: bold; }
+      font-weight: bold;
+      opacity: 0; }
     .club figure:hover {
       background-color: #af9570;
       color: white; }
       .club figure:hover figcaption {
+        opacity: 1;
+        opacity: 0; }
+      .club figure:hover .images img {
         opacity: 1; }
-      .club figure:hover img {
-        opacity: 0.5; }
+      .club figure:hover .images img:first-child {
+        opacity: 0; }
 
 .seats {
   list-style: none;

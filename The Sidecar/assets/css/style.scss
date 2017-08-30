@@ -21,7 +21,7 @@ body {
 
   &:before{
     content: '';
-    border: 3px solid $gold;
+    border: 2px solid $gold;
     border-image: linear-gradient(135deg, lighten($gold,10%), darken($gold,10%)) 30 stretch;
     position: fixed;
     left: 2rem;
@@ -42,7 +42,7 @@ p{
 section,
 header{
   >p,nav{
-    max-width: 320px;
+    max-width: 20em;
     margin: 1em auto;
   }
   margin: 2rem 0;
@@ -61,11 +61,15 @@ h3{
 .btn{
   position: relative;
   display: inline-block;
-  padding: .3em 1em;
+  padding: .5em 1em;
+  margin: .5em;
   font-weight: bold;
   color: darken($gold,40%);
   font-family: inherit;
   font-size: inherit;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 0.1em;
   cursor: pointer;
   text-decoration: none;
 
@@ -183,12 +187,29 @@ header{
     img{
       max-width: 100%;
       height: auto;
-      mix-blend-mode: multiply;
-      filter: brightness(1.25) grayscale(1) contrast(1.25);
+      display: inline-block;
+    }
+    >.images{
+      filter: brightness(1.05) grayscale(1) contrast(1.25);
+      mask-image: url(/assets/image-mask.svg);
+      mask-size: 100% 100%;
+      display: block;
+      position: relative;
+      img{
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+      }
+      img:first-child{
+          position: relative;
+          opacity: 1;
+      }
     }
     h3{
       text-align: center;
       position: relative;
+
     }
     figcaption{
       position: absolute;
@@ -202,17 +223,25 @@ header{
       padding: 1rem;
       display: flex;
       align-items: center;
+      justify-content: center;
       text-align: center;
       font-weight: bold;
+      opacity: 0;
     }
     &:hover{
       background-color: lighten(#977C55,10%);
       color: white;
       figcaption{
         opacity: 1;
+        opacity: 0;
       }
-      img{
-        opacity: 0.5;
+      .images{
+        img{
+          opacity: 1;
+        }
+        img:first-child{
+          opacity: 0;
+        }
       }
     }
 

@@ -32,6 +32,8 @@ body {
     top: 2vw;
     bottom: 2vw;
     right: 2vw;
+    pointer-events: none;
+    z-index: 100;
   }
 }
 

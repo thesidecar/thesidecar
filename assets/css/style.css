@@ -28,7 +28,9 @@ body {
     left: 2vw;
     top: 2vw;
     bottom: 2vw;
-    right: 2vw; }
+    right: 2vw;
+    pointer-events: none;
+    z-index: 100; }
 
 p {
   line-height: 1.2; }

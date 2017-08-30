@@ -163,15 +163,15 @@ header{
 .club{
   list-style: none;
   padding: 0;
-  width: 66vw;
   margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
+  max-width: 80vw;
   justify-content: space-around;
   >*{
     flex-grow: 1;
-    padding: 1rem;
-    max-width: 33%;
+    padding: 0;
+    width: 300px;
   }
   figure{
     position: relative;
@@ -227,6 +227,7 @@ header{
       text-align: center;
       font-weight: bold;
       opacity: 0;
+      display: none;
     }
     &:hover{
       background-color: lighten(#977C55,10%);
@@ -284,9 +285,8 @@ header{
 @media only screen and (max-width: 768px) {
 
   .club{
-    width: auto;
     >*{
-      max-width: 50%;
+      padding: 0;
     }
   }
 

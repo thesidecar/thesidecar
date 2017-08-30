@@ -128,19 +128,19 @@ header {
 .club {
   list-style: none;
   padding: 0;
-  width: 66vw;
   margin: 1rem auto;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 80vw;
   -ms-flex-pack: distribute;
       justify-content: space-around; }
   .club > * {
     -ms-flex-positive: 1;
         flex-grow: 1;
-    padding: 1rem;
-    max-width: 33%; }
+    padding: 0;
+    width: 300px; }
   .club figure {
     position: relative;
     padding: 1rem; }
@@ -192,7 +192,8 @@ header {
           justify-content: center;
       text-align: center;
       font-weight: bold;
-      opacity: 0; }
+      opacity: 0;
+      display: none; }
     .club figure:hover {
       background-color: #af9570;
       color: white; }
@@ -233,7 +234,5 @@ header {
       margin-right: .5em; }
 
 @media only screen and (max-width: 768px) {
-  .club {
-    width: auto; }
-    .club > * {
-      max-width: 50%; } }
+  .club > * {
+    padding: 0; } }

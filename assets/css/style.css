@@ -142,7 +142,7 @@ header {
     -ms-flex-positive: 1;
         flex-grow: 1;
     padding: 0;
-    width: 300px; }
+    max-width: 300px; }
   .club figure {
     position: relative;
     padding: 1rem; }

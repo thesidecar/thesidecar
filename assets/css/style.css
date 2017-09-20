@@ -208,7 +208,7 @@ header {
       .club figure figcaption a:nth-child(3) {
         bottom: 1rem;
         left: 1rem; }
-      .club figure figcaption a:last-child {
+      .club figure figcaption a:nth-child(4) {
         bottom: 1rem;
         right: 1rem; }
       .club figure figcaption p:first-child {

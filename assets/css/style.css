@@ -196,12 +196,35 @@ header {
       font-weight: bold;
       opacity: 0;
       display: none; }
+      .club figure figcaption a {
+        position: absolute;
+        font-size: 1.5rem; }
+      .club figure figcaption a:first-child {
+        left: 1rem;
+        top: 1rem; }
+      .club figure figcaption a:nth-child(2) {
+        top: 1rem;
+        right: 1rem; }
+      .club figure figcaption a:nth-child(3) {
+        bottom: 1rem;
+        left: 1rem; }
+      .club figure figcaption a:last-child {
+        bottom: 1rem;
+        right: 1rem; }
+      .club figure figcaption p:first-child {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background: #af9570;
+        transform: translateY(100%); }
     .club figure:hover {
       background-color: #af9570;
       color: white; }
       .club figure:hover figcaption {
         opacity: 1;
-        opacity: 0; }
+        display: block; }
       .club figure:hover .images img {
         opacity: 1; }
       .club figure:hover .images img:first-child {

@@ -192,6 +192,22 @@
       <li>
         <figure>
           <div class="images">
+            <img alt="Christine Eckel" src="assets/images/christine.jpg">
+            <img alt="Christine Eckel" class="over" src="assets/images/christine-2.jpg">
+          </div>
+          <h3>Christine Eckel</h3>
+          <figcaption>
+            <div>
+              <p>Doctor, Dogs and resident keeper of the Zen</p>
+              <p>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="images">
             <img alt="Ginny Emery" src="assets/images/ginny.jpg">
             <img alt="Ginny Emery" class="over" src="assets/images/ginny-2.jpg">
           </div>
@@ -230,8 +246,18 @@
           </figcaption>
         </figure>
       </li>
-
     </ul>
+    <script>
+      function randomizeNodes(nodes){
+        for(var i=0;i<nodes.length*2;++i){
+          var rndNode = Math.floor(Math.random()*nodes.length);
+          if(rndNode != i){
+            nodes[i%nodes.length].parentNode.insertBefore(nodes[rndNode],nodes[i%nodes.length]);
+          }
+        }
+      }
+      randomizeNodes(document.querySelectorAll('.club>li'));
+    </script>
   </section>
 
   <div class="hr"></div>

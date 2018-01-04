@@ -18,7 +18,7 @@ body {
   padding: 2vw; }
   body:before {
     content: '';
-    border: 2px solid #af9570;
+    border: 3px solid #af9570;
     border-image: linear-gradient(135deg, #c1ad91, #977c55) 30 stretch;
     position: fixed;
     left: 2rem;
@@ -230,6 +230,29 @@ header {
       .club figure:hover .images img:first-child {
         opacity: 0; }
 
+section.images {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin: 0 -5rem;
+  margin: 0 -4vw;
+  overflow: hidden; }
+  section.images > * {
+    -ms-flex: auto;
+        flex: auto; }
+  section.images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: vibrant-in 3s ease-in; }
+
 .seats {
   list-style: none;
   padding: 0;
@@ -258,6 +281,13 @@ header {
       content: '⬗';
       margin-right: .5em; }
 
+@keyframes vibrant-in {
+  0% {
+    -webkit-filter: brightness(1.05) grayscale(1) contrast(1.25);
+            filter: brightness(1.05) grayscale(1) contrast(1.25); }
+  100% {
+    -webkit-filter: none;
+            filter: none; } }
 @media only screen and (max-width: 768px) {
   .club > * {
     padding: 0; } }

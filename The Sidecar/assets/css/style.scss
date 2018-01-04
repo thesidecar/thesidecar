@@ -297,7 +297,7 @@ section.images{
     width: 100%;
     height: auto;
     display: block;
-    animation: vibrant-in 3s ease-in;
+    animation: vibrant-in 4s ease-in;
   }
 }
 
@@ -337,7 +337,10 @@ section.images{
 
 @keyframes vibrant-in{
   0%{
-    filter: brightness(1.05) grayscale(1) contrast(1.25);
+    filter: brightness(1.05) grayscale(1) contrast(1.5);
+  }
+  50%{
+    filter: brightness(1.05) grayscale(1) contrast(1.5);
   }
   100%{
     filter: none;
@@ -345,11 +348,9 @@ section.images{
 }
 
 @media only screen and (max-width: 768px) {
-
   .club{
     >*{
       padding: 0;
     }
   }
-
 }

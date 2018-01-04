@@ -251,7 +251,7 @@ section.images {
     width: 100%;
     height: auto;
     display: block;
-    animation: vibrant-in 3s ease-in; }
+    animation: vibrant-in 4s ease-in; }
 
 .seats {
   list-style: none;
@@ -283,8 +283,11 @@ section.images {
 
 @keyframes vibrant-in {
   0% {
-    -webkit-filter: brightness(1.05) grayscale(1) contrast(1.25);
-            filter: brightness(1.05) grayscale(1) contrast(1.25); }
+    -webkit-filter: brightness(1.05) grayscale(1) contrast(1.5);
+            filter: brightness(1.05) grayscale(1) contrast(1.5); }
+  50% {
+    -webkit-filter: brightness(1.05) grayscale(1) contrast(1.5);
+            filter: brightness(1.05) grayscale(1) contrast(1.5); }
   100% {
     -webkit-filter: none;
             filter: none; } }

@@ -10,6 +10,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+.wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading p, .wf-loading blockquote, .wf-loading ul {
+  opacity: 0; }
+
+.wf-active h1, .wf-active h2, .wf-active h3, .wf-active p, .wf-active blockquote, .wf-active ul {
+  animation: fade-in 2s cubic-bezier(0.4, 0, 0.1, 1); }
+
 body {
   background: url(apple-touch-icon.png) no-repeat center center;
   font-family: "mostra-nuova",sans-serif;
@@ -30,20 +36,26 @@ body {
     bottom: 2vw;
     right: 2vw;
     pointer-events: none;
-    z-index: 100; }
+    z-index: 100;
+    -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.05));
+            filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.05)); }
 
 p {
   line-height: 1.2; }
 
 section,
 header {
-  margin: 2rem 0;
+  margin: 4rem 0;
   text-align: center; }
   section > p, section nav,
   header > p,
   header nav {
     max-width: 20em;
     margin: 1em auto; }
+
+.logo {
+  -webkit-filter: drop-shadow(10px 20px 6px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(10px 20px 6px rgba(0, 0, 0, 0.2)); }
 
 h1, h2, h3, h4 {
   text-transform: uppercase;
@@ -67,6 +79,8 @@ h3 {
   letter-spacing: 0.1em;
   cursor: pointer;
   text-decoration: none;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
+          filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.1));
   border-color: rgba(175, 149, 112, 0.9); }
   .btn.disabled {
     pointer-events: none;
@@ -102,11 +116,13 @@ h3 {
 
 hr, .hr {
   width: 10%;
-  margin: 4rem auto;
+  margin: 6vw auto;
   border: 0;
   position: relative;
   border-top: 2px solid #af9570;
-  text-align: center; }
+  text-align: center;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.05));
+          filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.05)); }
   hr:before, hr:after, .hr:before, .hr:after {
     content: '';
     width: 33%;
@@ -194,8 +210,7 @@ header {
           justify-content: center;
       text-align: center;
       font-weight: bold;
-      opacity: 0;
-      display: none; }
+      opacity: 0; }
       .club figure figcaption a {
         position: absolute;
         font-size: 1.5rem; }
@@ -233,25 +248,45 @@ header {
 section.images {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-direction: row;
       flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin: 0 -5rem;
   margin: 0 -4vw;
   overflow: hidden; }
   section.images > * {
     -ms-flex: auto;
-        flex: auto; }
+        flex: auto;
+    overflow: hidden;
+    width: 33.3333vw;
+    height: 24vw;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center; }
   section.images img {
     width: 100%;
     height: auto;
     display: block;
-    animation: vibrant-in 4s ease-in; }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-filter: brightness(1.05) grayscale(1) contrast(1);
+            filter: brightness(1.05) grayscale(1) contrast(1);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.1, 1);
+    transform: scale(1.2); }
+    section.images img:hover {
+      -webkit-filter: none;
+              filter: none;
+      transform: scale(1.1);
+      mix-blend-mode: normal; }
 
 .seats {
   list-style: none;
@@ -285,12 +320,21 @@ section.images {
   0% {
     -webkit-filter: brightness(1.05) grayscale(1) contrast(1.5);
             filter: brightness(1.05) grayscale(1) contrast(1.5); }
-  50% {
-    -webkit-filter: brightness(1.05) grayscale(1) contrast(1.5);
-            filter: brightness(1.05) grayscale(1) contrast(1.5); }
   100% {
     -webkit-filter: none;
             filter: none; } }
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @media only screen and (max-width: 768px) {
+  section.images {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    section.images > * {
+      width: 100%;
+      height: 33vh; }
+
   .club > * {
     padding: 0; } }

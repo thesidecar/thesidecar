@@ -1,4 +1,74 @@
-<!-- @include _header -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+  <title>The Sidecar: A Co-working Community in Helena, Montana</title>
+
+  <meta content="The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
+  We believe that we do life and work better, side-by-side than alone." name="description"\>
+  <meta content="Rogie King" name="author"\>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="The Sidecar" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:creator" content="@rogie" />
+  <meta name="twitter:url" property="og:url" content="http://thesidecar.club" />
+  <meta name="twitter:image:width" content="1000" />
+  <meta name="twitter:image:height" content="1000" />
+  <meta name="twitter:image" property="og:image" content="http://thesidecar.club/assets/images/logo.png" />
+  <meta name="twitter:title" property="og:title" content="The Sidecar" />
+  <meta name="twitter:description" property="og:description" content="The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
+  We believe that we do life and work better, side-by-side than alone." />
+
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  <script src="https://use.typekit.net/eyu0elh.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <title>The Sidecar: A Co-working Community in Helena, Montana</title>
+
+  <script src="//use.fontawesome.com/fe09506ba1.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+  <img class="logo" src="assets/sidecar-logo.svg">
+</nav>
+
+  </header>
 
   <section>
     <h2>Better Together</h2>
@@ -12,13 +82,13 @@
 
   <section class="images">
     <div>
-      <img alt="Collaboration/openly talkative yet productive environment" src="<!-- @path space-1.jpg -->">
+      <img alt="Collaboration/openly talkative yet productive environment" src="assets/images/space-1.jpg">
     </div>
     <div>
-      <img alt="Custom made sit/stand on demand desks and a fun atmosphere" src="<!-- @path space-3.jpg -->">
+      <img alt="Custom made sit/stand on demand desks and a fun atmosphere" src="assets/images/space-3.jpg">
     </div>
     <div>
-      <img alt="The Sidecar" src="<!-- @path space-2.jpg -->">
+      <img alt="The Sidecar" src="assets/images/space-2.jpg">
     </div>
   </section>
 
@@ -35,8 +105,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Jason O'Neil" src="<!-- @path jason.jpg -->">
-            <img alt="Jason O'Neil" class="over" src="<!-- @path jason-2.jpg -->">
+            <img alt="Jason O'Neil" src="assets/images/jason.jpg">
+            <img alt="Jason O'Neil" class="over" src="assets/images/jason-2.jpg">
           </div>
           <h3>Jason O'Neil</h3>
           <figcaption>
@@ -60,8 +130,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Rogie King" src="<!-- @path rogie.jpg -->">
-            <img alt="Rogie King" class="over" src="<!-- @path rogie-2.jpg -->">
+            <img alt="Rogie King" src="assets/images/rogie.jpg">
+            <img alt="Rogie King" class="over" src="assets/images/rogie-2.jpg">
           </div>
           <h3>Rogie King</h3>
           <figcaption>
@@ -88,8 +158,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Jodi Carlson" src="<!-- @path jodi.jpg -->">
-            <img alt="Jodi Carlson" class="over" src="<!-- @path jodi-2.jpg -->">
+            <img alt="Jodi Carlson" src="assets/images/jodi.jpg">
+            <img alt="Jodi Carlson" class="over" src="assets/images/jodi-2.jpg">
           </div>
           <h3>Jodi Carlson</h3>
           <figcaption>
@@ -110,8 +180,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Tara Jones" src="<!-- @path tara.jpg -->">
-            <img alt="Tara Jones" class="over" src="<!-- @path tara-2.jpg -->">
+            <img alt="Tara Jones" src="assets/images/tara.jpg">
+            <img alt="Tara Jones" class="over" src="assets/images/tara-2.jpg">
           </div>
           <h3>Tara Jones</h3>
           <figcaption>
@@ -132,8 +202,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Christine Eckel" src="<!-- @path christine.jpg -->">
-            <img alt="Christine Eckel" class="over" src="<!-- @path christine-2.jpg -->">
+            <img alt="Christine Eckel" src="assets/images/christine.jpg">
+            <img alt="Christine Eckel" class="over" src="assets/images/christine-2.jpg">
           </div>
           <h3>Christine Eckel</h3>
           <figcaption>
@@ -148,8 +218,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Ginny Emery" src="<!-- @path ginny.jpg -->">
-            <img alt="Ginny Emery" class="over" src="<!-- @path ginny-2.jpg -->">
+            <img alt="Ginny Emery" src="assets/images/ginny.jpg">
+            <img alt="Ginny Emery" class="over" src="assets/images/ginny-2.jpg">
           </div>
           <h3>Ginny Emery</h3>
           <figcaption>
@@ -170,27 +240,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Bridget Rebo" src="<!-- @path bridgett.jpg -->">
-            <img alt="Bridget Rebo" class="over" src="<!-- @path bridgett-2.jpg -->">
-          </div>
-          <h3>Bridget Rebo</h3>
-          <figcaption>
-            <div>
-              <p>Accounting Specialist, Homeschooling Mamma and Lover of running, great coffee &amp; good books.</p>
-              <p>
-                <a href="//www.hjhudsonconsulting.com/">
-                  <i class="fa fa-globe" aria-hidden="true"></i>
-                </a>
-              </p>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="images">
-            <img alt="Jed Dailey" src="<!-- @path jed.jpg -->">
-            <img alt="Jed Dailey" class="over" src="<!-- @path jed-2.jpg -->">
+            <img alt="Jed Dailey" src="assets/images/jed.jpg">
+            <img alt="Jed Dailey" class="over" src="assets/images/jed-2.jpg">
           </div>
           <h3>Jed Dailey</h3>
           <figcaption>
@@ -208,8 +259,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Katie Loveland" src="<!-- @path katie.jpg -->">
-            <img alt="Katie Loveland" class="over" src="<!-- @path katie-2.jpg -->">
+            <img alt="Katie Loveland" src="assets/images/katie.jpg">
+            <img alt="Katie Loveland" class="over" src="assets/images/katie-2.jpg">
           </div>
           <h3>Katie Loveland</h3>
           <figcaption>
@@ -230,8 +281,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Jess Holdren" src="<!-- @path jess.jpg -->">
-            <img alt="Jess Holdren" class="over" src="<!-- @path jess-2.jpg -->">
+            <img alt="Jess Holdren" src="assets/images/jess.jpg">
+            <img alt="Jess Holdren" class="over" src="assets/images/jess-2.jpg">
           </div>
           <h3>Jess Holdren</h3>
           <figcaption>
@@ -250,8 +301,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Seth Holdren" src="<!-- @path seth.jpg -->">
-            <img alt="Seth Holdren" class="over" src="<!-- @path seth-2.jpg -->">
+            <img alt="Seth Holdren" src="assets/images/seth.jpg">
+            <img alt="Seth Holdren" class="over" src="assets/images/seth-2.jpg">
           </div>
           <h3>Seth Holdren</h3>
           <figcaption>
@@ -271,8 +322,8 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Skye Hatten" src="<!-- @path skye.jpg -->">
-            <img alt="Skye Hatten" class="over" src="<!-- @path skye-2.jpg -->">
+            <img alt="Skye Hatten" src="assets/images/skye.jpg">
+            <img alt="Skye Hatten" class="over" src="assets/images/skye-2.jpg">
           </div>
           <h3>Skye Hatten</h3>
           <figcaption>
@@ -321,24 +372,24 @@
 
   <section class="images">
     <div>
-      <img src="<!-- @path sessions/sessions-1-jodi.jpg -->">
+      <img src="assets/images/sessions/sessions-1-jodi.jpg">
     </div>
     <div>
-      <img src="<!-- @path sessions/sessions-1-hibernator.jpg -->">
+      <img src="assets/images/sessions/sessions-1-hibernator.jpg">
     </div>
     <div>
-      <img src="<!-- @path sessions/sessions-1-taylor.jpg -->">
+      <img src="assets/images/sessions/sessions-1-taylor.jpg">
     </div>
   </section>
   <section class="images">
     <div>
-      <img src="<!-- @path sessions/sessions-1-jodi-2.jpg -->">
+      <img src="assets/images/sessions/sessions-1-jodi-2.jpg">
     </div>
     <div>
-      <img src="<!-- @path sessions/sessions-1-hibernator-2.jpg -->">
+      <img src="assets/images/sessions/sessions-1-hibernator-2.jpg">
     </div>
     <div>
-      <img src="<!-- @path sessions/sessions-1-hibernator-3.jpg -->">
+      <img src="assets/images/sessions/sessions-1-hibernator-3.jpg">
     </div>
   </section>
 
@@ -364,7 +415,7 @@
         <p>
           <a class="btn" href="mailto:thesidecarclub@gmail.com">
             <i></i>
-            2 Left — Contact us
+            4 Left — Contact us
           </a>
         </p>
       </li>
@@ -388,7 +439,7 @@
         <p>
           <a class="btn" href="mailto:thesidecarclub@gmail.com">
             <i></i>
-             2 Left — Contact us
+             1 Left — Contact us
           </a>
         </p>
       </li>
@@ -437,4 +488,6 @@
   </section>
 
 
-<!-- @include _footer -->
+</body>
+
+</html>

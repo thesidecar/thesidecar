@@ -1,77 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-
-  <title>The Sidecar: A Co-working Community in Helena, Montana</title>
-
-  <meta content="The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
-  We believe that we do life and work better, side-by-side than alone." name="description"\>
-  <meta content="Rogie King" name="author"\>
-
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="The Sidecar" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:creator" content="@rogie" />
-  <meta name="twitter:url" property="og:url" content="http://thesidecar.club" />
-  <meta name="twitter:image:width" content="1000" />
-  <meta name="twitter:image:height" content="1000" />
-  <meta name="twitter:image" property="og:image" content="http://thesidecar.club/assets/images/logo.png" />
-  <meta name="twitter:title" property="og:title" content="The Sidecar" />
-  <meta name="twitter:description" property="og:description" content="The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
-  We believe that we do life and work better, side-by-side than alone." />
-
-
-
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-
-  <link rel='stylesheet' href='assets/css/normalize.css'>
-<link rel='stylesheet' href='assets/css/style.css'>
-  <script src="https://use.typekit.net/eyu0elh.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-  <title>The Sidecar: A Co-working Community in Helena, Montana</title>
-
-  <script src="//use.fontawesome.com/fe09506ba1.js"></script>
-
-</head>
-
-<body>
-
-  <header>
-    <nav>
-  <img class="logo" src="assets/sidecar-logo.svg">
-</nav>
-
-  </header>
+<!-- @include _header -->
 
   <section>
-    <h2>Better Together</h2>
+    <h1>A Co-working Space &amp; <br> Community in Helena, Montana</h1>
     <p>
       The Sidecar is tightly-knit co-working community of creators, doers, idea makers and innovators in swanky downtown Helena.
       We believe that we do life and work better, side-by-side than alone.
@@ -82,13 +12,24 @@
 
   <section class="images">
     <div>
-      <img alt="Collaboration/openly talkative yet productive environment" src="assets/images/space-1.jpg">
+      <img alt="Collaboration/openly talkative yet productive environment" src="assets/images/space/space-1.jpg">
     </div>
     <div>
-      <img alt="Custom made sit/stand on demand desks and a fun atmosphere" src="assets/images/space-3.jpg">
+      <img alt="The Sidecar" src="assets/images/space/space-2.jpg">
     </div>
     <div>
-      <img alt="The Sidecar" src="assets/images/space-2.jpg">
+      <img alt="Custom made sit/stand on demand desks and a fun atmosphere" src="assets/images/space/space-3.jpg">
+    </div>
+  </section>
+  <section class="images">
+    <div>
+      <img alt="Free home brew, kombucha, and coffee" src="assets/images/space/beer.jpg">
+    </div>
+    <div>
+      <img alt="Zen, open desk layout atmosphere" src="assets/images/space/ginny.jpg">
+    </div>
+    <div>
+      <img alt="The Sidecar — co-working space and community" src="assets/images/space/typewriter.jpg">
     </div>
   </section>
 
@@ -158,28 +99,6 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Jodi Carlson" src="assets/images/jodi.jpg">
-            <img alt="Jodi Carlson" class="over" src="assets/images/jodi-2.jpg">
-          </div>
-          <h3>Jodi Carlson</h3>
-          <figcaption>
-            <div>
-              <p>Illustrator, Felines &amp; Flatulence</p>
-              <p>
-                <a href="//twitter.com/jodileecarlson">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="//instagram.com/jodileecarlson">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-              </p>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="images">
             <img alt="Tara Jones" src="assets/images/tara.jpg">
             <img alt="Tara Jones" class="over" src="assets/images/tara-2.jpg">
           </div>
@@ -194,22 +113,6 @@
                 <a href="//www.facebook.com/HeardCommunications">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-              </p>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="images">
-            <img alt="Christine Eckel" src="assets/images/christine.jpg">
-            <img alt="Christine Eckel" class="over" src="assets/images/christine-2.jpg">
-          </div>
-          <h3>Christine Eckel</h3>
-          <figcaption>
-            <div>
-              <p>Doctor, Dogs and resident keeper of the Zen</p>
-              <p>
               </p>
             </div>
           </figcaption>
@@ -281,15 +184,15 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Jess Holdren" src="assets/images/jess.jpg">
-            <img alt="Jess Holdren" class="over" src="assets/images/jess-2.jpg">
+            <img alt="Alex Swanson" src="assets/images/alex.jpg">
+            <img alt="Alex Swanson" class="over" src="assets/images/alex-2.jpg">
           </div>
-          <h3>Jess Holdren</h3>
+          <h3>Alex Swanson</h3>
           <figcaption>
             <div>
-              <p>Downtown enthusiast, urban designer, line dancing baton twirler.</p>
+              <p>Independent gameplay. ux and visual designer. world builder.</p>
               <p>
-                <a href="//www.landsolutionsmt.com/">
+                <a href="//www.linkedin.com/in/alexswanson/">
                   <i class="fa fa-globe" aria-hidden="true"></i>
                 </a>
               </p>
@@ -297,19 +200,18 @@
           </figcaption>
         </figure>
       </li>
-
       <li>
         <figure>
           <div class="images">
-            <img alt="Seth Holdren" src="assets/images/seth.jpg">
-            <img alt="Seth Holdren" class="over" src="assets/images/seth-2.jpg">
+            <img alt="Katie Swanson" src="assets/images/katies.jpg">
+            <img alt="Katie Swanson" class="over" src="assets/images/katies-2.jpg">
           </div>
-          <h3>Seth Holdren</h3>
+          <h3>Katie Swanson</h3>
           <figcaption>
             <div>
-              <p>Business Coach, Accidental REALTOR® + unsolicited life advice</p>
+              <p>Non-profit admin/violist/mythical sea creature.</p>
               <p>
-                <a href="//helenare.com">
+                <a href="//www.katiewhiteswanson.com/">
                   <i class="fa fa-globe" aria-hidden="true"></i>
                 </a>
               </p>
@@ -317,33 +219,46 @@
           </figcaption>
         </figure>
       </li>
-
-
       <li>
         <figure>
           <div class="images">
-            <img alt="Skye Hatten" src="assets/images/skye.jpg">
-            <img alt="Skye Hatten" class="over" src="assets/images/skye-2.jpg">
+            <img alt="Mike H." src="assets/images/mike.jpg">
+            <img alt="Mike H." class="over" src="assets/images/mike-2.jpg">
           </div>
-          <h3>Skye Hatten</h3>
+          <h3>Mike H.</h3>
           <figcaption>
             <div>
-              <p>Camera wieldin’ wine lover, movie crier, retired astronaut.</p>
+              <p>lawyer. baseball. power walker.</p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="images">
+            <img alt="Misty Boles" src="assets/images/misty.jpg">
+            <img alt="Misty Boles" class="over" src="assets/images/misty-2.jpg">
+          </div>
+          <h3>Misty Boles</h3>
+          <figcaption>
+            <div>
+              <p>kinda classy, kinda not. crossfit tortured, taco loving, wine drinking, photographer."</p>
               <p>
-                <a href="//www.facebook.com/SkyeHattenPhotography/">
+                <a href="//www.mistyboles.com">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </a>
+                <a href="//www.facebook.com/MistyBolesPhotography/">
                   <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="//www.instagram.com/skyehatten/">
+                <a href="//www.instagram.com/mistybolesphotography/">
                   <i class="fa fa-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="//skyehattenphotography.com/">
-                  <i class="fa fa-globe" aria-hidden="true"></i>
                 </a>
               </p>
             </div>
           </figcaption>
         </figure>
       </li>
+
     </ul>
     <script>
       function randomizeNodes(nodes){
@@ -357,42 +272,6 @@
       randomizeNodes(document.querySelectorAll('.club>li'));
     </script>
   </section>
-
-  <div class="hr"></div>
-
-  <section>
-    <h2>Community-Focused</h2>
-    <p>
-      We're not just an office. Our goal is to use this space to help our community have
-      a platform to fulfill their passions. From drink-n-draw sessions, to movie nights to
-      our very own bi-monthly musical event, The Sidecar Sessions, we hope to make Helena a
-      more vibrant place.
-    </p>
-  </section>
-
-  <section class="images">
-    <div>
-      <img src="assets/images/sessions/sessions-1-jodi.jpg">
-    </div>
-    <div>
-      <img src="assets/images/sessions/sessions-1-hibernator.jpg">
-    </div>
-    <div>
-      <img src="assets/images/sessions/sessions-1-taylor.jpg">
-    </div>
-  </section>
-  <section class="images">
-    <div>
-      <img src="assets/images/sessions/sessions-1-jodi-2.jpg">
-    </div>
-    <div>
-      <img src="assets/images/sessions/sessions-1-hibernator-2.jpg">
-    </div>
-    <div>
-      <img src="assets/images/sessions/sessions-1-hibernator-3.jpg">
-    </div>
-  </section>
-
 
 <div class="hr"></div>
 
@@ -413,9 +292,9 @@
           <li>Wifi/Electric</li>
         </ul>
         <p>
-          <a class="btn" href="mailto:thesidecarclub@gmail.com">
+          <a class="btn disabled" href="mailto:thesidecarclub@gmail.com">
             <i></i>
-            4 Left — Contact us
+            Sold Out
           </a>
         </p>
       </li>

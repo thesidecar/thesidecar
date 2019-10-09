@@ -191,25 +191,6 @@
       <li>
         <figure>
           <div class="images">
-            <img alt="Kaila Matteson" src="assets/images/kaila.jpg">
-            <img alt="Kaila Matteson" class="over" src="assets/images/kaila-2.jpg">
-          </div>
-          <h3>Kaila Matteson</h3>
-          <figcaption>
-            <div>
-              <p>Human Resources learner, crazy-tired Momma, part-time cookie monster.</p>
-              <p>
-                <a href="//www.linkedin.com/in/kaila-matteson">
-                  <i class="fa fa-globe" aria-hidden="true"></i>
-                </a>
-              </p>
-            </div>
-          </figcaption>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <div class="images">
             <img alt="Kate Dramstad" src="assets/images/kate.jpg">
             <img alt="Kate Dramstad" class="over" src="assets/images/kate-2.jpg">
           </div>
@@ -248,6 +229,81 @@
           </figcaption>
         </figure>
       </li>
+      <li>
+        <figure>
+          <div class="images">
+            <img alt="Anna Strange" src="assets/images/anna.jpg">
+            <img alt="Anna Strange" class="over" src="assets/images/anna-2.jpg">
+          </div>
+          <h3>Anna Strange</h3>
+          <figcaption>
+            <div>
+              <p>Event & marketing managing, community building, Oula-dancing queen.</p>
+              <p>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="images">
+            <img alt="Allie Reynolds" src="assets/images/allie.jpg">
+            <img alt="Allie Reynolds" class="over" src="assets/images/allie-2.jpg">
+          </div>
+          <h3>Allie Reynolds</h3>
+          <figcaption>
+            <div>
+              <p>Event & marketing managing, community building, Oula-dancing queen.</p>
+              <p>
+                <a href="//www.am-marketing.biz">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </a>
+                <a href="//instagram.com/allie_raeee">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="images">
+            <img alt="Jeremy Osborn" src="assets/images/jeremy.jpg">
+            <img alt="Jeremy Osborn" class="over" src="assets/images/jeremy-2.jpg">
+          </div>
+          <h3>Jeremy Osborn</h3>
+          <figcaption>
+            <div>
+              <p>Nonprofit risk manager and jack of all operations, weekend sourdough enthusiast, overly optimistic gardener.</p>
+              <p>
+                <a href="//350.org">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <div class="images">
+            <img alt="Jen Davis" src="assets/images/jen.jpg">
+            <img alt="Jen Davis" class="over" src="assets/images/jen-2.jpg">
+          </div>
+          <h3>Jen Davis</h3>
+          <figcaption>
+            <div>
+              <p>
+                <a href="//www.leadershipmontana.org">
+                  <i class="fa fa-globe" aria-hidden="true"></i>
+                </a>
+              </p>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
     </ul>
     <script>
       function randomizeNodes(nodes){
@@ -270,7 +326,7 @@
       <li>
         <h3>
           Shared Desk
-          <small>$150/mo</small>
+          <small>$99/mo</small>
         </h3>
         <p>For the casual individual who needs a home base to recharge and focus. Come take a seat and be a part of the Sidecar community.</p>
         <ul>
@@ -336,6 +392,60 @@
         </p>
       </li>
     </ul>
+  </section>
+
+  <div class="hr"></div>
+
+  <section class="social-networks">
+    <h2>Socially, Speaking</h2>
+    <p>Keep in the loop on all of our events, fun, and shenanigans. </p>
+    <div class="social-networks--btns">
+      <a class="btn btn-social" title="Instagram" href="https://www.instagram.com/thesidecarmt/">
+        <i></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        <span id="instagram-feed" class="btn-social--images auto-rotating-images"></span>
+      </a>
+      <a class="btn btn-social" title="Facebook" href="https://www.facebook.com/sidecarclubmt/">
+        <i></i>
+        <i class="fa fa-facebook" aria-hidden="true"></i>
+        <span id="facebook-feed" class="btn-social--images auto-rotating-images">
+          <img src="assets/images/facebook/fb-1.jpg">
+          <img src="assets/images/facebook/fb-2.jpg">
+          <img src="assets/images/facebook/fb-3.jpg">
+          <img src="assets/images/facebook/fb-4.jpg">
+        </span>
+      </a>
+    </div>
+      <script type="text/html" id="insta_tmpl">
+        <% data.forEach(function(gram,i){ if (i < 4) { %>
+          <img alt="<%= gram.caption %>" width="<%= gram.images.standard_resolution.width %>" height="<%= gram.images.standard_resolution.height %>" src="<%= gram.images.standard_resolution.url %>"></li>
+        <% }}); %>
+      </script>
+      <script>
+        fetch('https://api.instagram.com/v1/users/7645453071/media/recent?access_token=7645453071.1677ed0.fac22b9349c146f38512061ef55f588c&count=24')
+          .then(function(res){
+            res.text().then(function(json) {
+              var data = JSON.parse(json);
+              if(data.data){
+                var grams = document.getElementById("instagram-feed");
+                grams.innerHTML = tmpl("insta_tmpl", data );
+              }
+            });
+          }).catch(function(){
+            console.error('Error in fetching the website');
+          });
+      </script>
+      <script>
+        /* doesnt work on non-https
+        FB.api(
+            "/1413714025382467/photos",
+            function (response) {
+              if (response && !response.error) {
+                console.log('FB: ', response)
+              }
+            }
+        );*/
+      </script>
   </section>
 
   <div class="hr"></div>

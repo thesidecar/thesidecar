@@ -77,7 +77,64 @@ h3 {
   letter-spacing: 0.1em;
   cursor: pointer;
   text-decoration: none;
-  border-color: rgba(175, 149, 112, 0.9); }
+  border-color: rgba(175, 149, 112, 0.9);
+
+  &-social {
+    padding:4em 2em;
+    width: 300px;
+
+    &{
+      border-color: #AF9572 !important;
+    }
+
+    .fa{
+      font-size: 2.5rem;
+      z-index: 1;
+      position: relative;
+      color: #AF9572;
+      transition: all 0.1s cubic-bezier(0.4, 0, 0.1, 1);
+    }
+
+    &:hover{
+      .btn-social--images{
+        opacity: 1;
+      }
+      .fa{
+        color: white;
+        filter: drop-shadow(0 4px 3px rgba(0,0,0,0.2));
+      }
+      img{
+        filter: brightness(1) grayscale(0) contrast(1);
+      }
+    }
+
+    &--images{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      overflow: hidden;
+      background: white;
+      opacity: 0.15;
+      z-index: -1;
+      transition: all 0.1s cubic-bezier(0.4, 0, 0.1, 1);
+
+      img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        filter: brightness(1.2) grayscale(1) contrast(1);
+        transform: translate(-50%,-50%);
+        ~ img{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
   .btn.disabled {
     pointer-events: none;
     color: rgba(175, 149, 112, 0.5); }
@@ -309,6 +366,49 @@ section.images {
     .seats ul li:before {
       content: '⬗';
       margin-right: .5em; }
+
+
+.social-networks {
+
+  &--btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn{
+      margin: 1em;
+    }
+  }
+}
+
+.auto-rotating-images{
+  img{
+    opacity:0;
+    animation-name: fade;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+  }
+  img:nth-child(1){
+    animation-delay: 0s;
+  }
+  img:nth-child(2){
+    animation-delay: 3s;
+  }
+  img:nth-child(3){
+    animation-delay: 6s;
+  }
+  img:nth-child(4){
+    animation-delay: 9s;
+  }
+}
+
+@keyframes fade {
+  0%   { opacity: 0; }
+  11.11%   { opacity: 1; }
+  33.33%  { opacity: 1; }
+  44.44%  { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 @keyframes vibrant-in {
   0% {

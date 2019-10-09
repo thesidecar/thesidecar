@@ -29,8 +29,21 @@
 
   <!-- @reload -->
   <!-- @stylesheet normalize style -->
+  <!-- @javascript tmpl -->
   <script src="https://use.typekit.net/eyu0elh.js"></script>
   <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId            : '629964304193635',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v4.0'
+      });
+    };
+  </script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 
   <title>The Sidecar: A Co-working Community in Helena, Montana</title>
 
